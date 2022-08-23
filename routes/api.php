@@ -28,3 +28,4 @@ Route::get('list/{id}',[DeviceController::class,'listParams']);
 
 
 Route::post('add',[DeviceController::class,'add']);
+Route::put('update',[DeviceController::class,'update']);
