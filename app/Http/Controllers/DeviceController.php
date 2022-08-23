@@ -26,4 +26,18 @@ class DeviceController extends Controller
     public function listParams($id=null){
         return Device::find($id);
     }
+
+    public function add(Request $request){
+        $device=new Device();
+        $device->name=$request->name;
+        $device->member_id=$request->member_id;
+        $result=$device->save();
+        if($result){
+            return ["Result" =>'Data has been saved'];   
+        }
+        else{
+            return ["Result" =>'Oparation Failed'];
+        }
+            
+}
 }

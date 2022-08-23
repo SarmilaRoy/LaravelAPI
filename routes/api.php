@@ -25,3 +25,6 @@ Route::get('data',[DummyAPIController::class,'getData']);
 
 Route::get('list',[DeviceController::class,'list']);
 Route::get('list/{id}',[DeviceController::class,'listParams']);
+
+
+Route::post('add',[DeviceController::class,'add']);
